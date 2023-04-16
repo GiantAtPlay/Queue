@@ -1,4 +1,4 @@
-import Queue from "./../../queue-with-processing.js"
+import Queue from "../../queue-with-processing.js"
 
 const myQueue = new Queue()
 
