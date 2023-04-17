@@ -35,11 +35,16 @@ export default class Queue {
     /** Remove first item from internal items array and return it */
     dequeue(){
         const item = this.#items[this.#next]
+
+        if(item === undefined){
+            console.log(`No more items in '${this.#name}'`)
+            return item
+        }
+
         delete this.#items[this.#next]
         this.#next++
 
-        if(item === undefined) console.log(`No more items in '${this.#name}'`)
-        else console.log(`Removed item from '${this.#name}':`, item)
+        console.log(`Removed item from '${this.#name}':`, item)
 
         return item
     }
